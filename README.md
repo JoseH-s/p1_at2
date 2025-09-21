@@ -4,11 +4,11 @@ Nome: José Henrique Ribeiro dos Santos RA:1994042
 
 ---------------------------------------------------------
 
-**Instruções de Execução**
+#Instruções de Execução
 
-  Instale e abra o XAMPP.
+  -Instale e abra o XAMPP.
   
-  De Start no "apache".
+  -De Start no "apache".
 
 **Verifique se a pasta do projeto está em:**
 
