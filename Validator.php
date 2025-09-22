@@ -1,26 +1,26 @@
 <?php
 
-class Validator{
+class Validator
+{
 
-    public static function validarEmail(string $email)
+    public static function validateEmail(string $email)
     {
         if (filter_var($email, FILTER_VALIDATE_EMAIL)){
             return true;
-        }else{
-            return "E-mail inválido";
         }
+        return false;
         
     }
 
-    public static function validarSenha(string $senha)
+    public static function validatePassword(string $password)
     {
-        if(strlen($senha) < 8){
+        if(strlen($password) < 8){
             return "A senha deve ter pelo menos 8 caracteres";
         }
-        if(!preg_match('/[A-Z]/', $senha)){
+        if(!preg_match('/[A-Z]/', $password)){
             return "A senha deve ter pelo menos uma letra maiúscula";
         }
-        if(!preg_match('/\d/', $senha)){
+        if(!preg_match('/\d/', $password)){
             return "A senha deve ter pelo menos um número";
         }
         return true;
@@ -35,4 +35,5 @@ class Validator{
         }
         return true;
     }
+
 }
