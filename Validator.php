@@ -14,7 +14,7 @@ class Validator
 
     public static function validatePassword(string $password)
     {
-        if(strlen($password) < 8){
+        if (strlen($password) < 8){
             return "A senha deve ter pelo menos 8 caracteres";
         }
         if(!preg_match('/[A-Z]/', $password)){
@@ -26,9 +26,9 @@ class Validator
         return true;
     }
 
-    public static function emailExiste(string $email, array $usuarios)
+    public static function emailExiste(string $email, array $users)
     {
-        foreach($usuarios as $usuario){
+        foreach ($users as $user){
             if($usuario->getEmail() === $email){
                 return "E-mail já está em uso";
             }
@@ -37,3 +37,4 @@ class Validator
     }
 
 }
+
