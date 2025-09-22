@@ -29,7 +29,6 @@ echo "<br>";
 echo "-----------------------------------------------------------------<br><br>";
 
 // Caso 3 - Tentativa de login com senha errada
-$usuario1 = new User(1, "José Henrique", "jose@gmail.com", "Teste123");
 echo $usuario1;
 echo "<br>";
 $userManager->login("jose@gmail.com", "Teste124");
@@ -44,12 +43,13 @@ echo "<br>";
 echo "-----------------------------------------------------------------<br><br>";
 
 // Caso 5 - Cadastro de usuário com e-mail duplicado
-$usuario2 = new User(4, "Ítalo Ricci", "italo@gmail.com", "Senha123");
-echo $usuario2;
+$usuario4 = new User(4, "Ítalo Ricci", "italo@gmail.com", "Senha123");
+echo $usuario4;
 echo "<br>";
-$userManager->cadastrarUsuario($usuario1);
+$userManager->cadastrarUsuario($usuario4);
 echo "<br>";
 echo "-----------------------------------------------------------------<br><br>";
+
 
 
 
