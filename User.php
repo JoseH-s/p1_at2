@@ -1,17 +1,18 @@
 <?php
 
-Class User{
+Class User
+{
     private int $id;
-    private string $nome;
+    private string $name;
     private string $email;
-    private string $senha;
+    private string $password;
 
-    public function __construct($id, $nome, $email, $senha)
+    public function __construct($id, $name, $email, $password)
     {
         $this->id = $id;
-        $this->nome = $nome;
+        $this->nome = $name;
         $this->email = $email;
-        $this->senha = $senha;
+        $this->senha = $password;
     }
 
     public function getId(): int
@@ -19,9 +20,9 @@ Class User{
         return $this->id;
     }
 
-    public function getNome(): string
+    public function getName(): string
     {
-        return $this->nome;
+        return $this->name;
     }
 
     public function getEmail(): string
@@ -29,17 +30,18 @@ Class User{
         return $this->email;
     }
 
-    public function getSenha(): string
+    public function getPassword(): string
     {
-        return $this->senha;
+        return $this->password;
     }
 
-    public function setSenha(string $senha): void
+    public function setPassword(string $password): void
     {
-        $this->senha = password_hash($senha, PASSWORD_DEFAULT);
+        $this->password = password_hash($password, PASSWORD_DEFAULT);
     }
 
     public function __toString(): string {
         return "ID: " . $this->getId() . ", Nome: " . $this->getNome() . ", Email: " . $this->getEmail();
     }
+
 }
