@@ -3,7 +3,7 @@
 class Validator
 {
 
-    public static function validarEmail(string $email):bool
+    public static function validateEmail(string $email):bool
     {
         if (filter_var($email, FILTER_VALIDATE_EMAIL)){
             return true;
@@ -12,7 +12,7 @@ class Validator
         
     }
 
-    public static function validarPassword(string $password)
+    public static function validatePassword(string $password)
     {
         if(strlen($password) < 8){
             return "A senha deve ter pelo menos 8 caracteres";
@@ -37,4 +37,5 @@ class Validator
         }
         return false;
     }
+
 }
