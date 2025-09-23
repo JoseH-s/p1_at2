@@ -5,13 +5,12 @@ class Validator
 
     public static function validateEmail(string $email):bool
     {
-        if (filter_var($email, FILTER_VALIDATE_EMAIL)){
+        if(filter_var($email, FILTER_VALIDATE_EMAIL)){
             return true;
         }
         return false;
         
     }
-
     public static function validatePassword(string $password)
     {
         if(strlen($password) < 8){
@@ -30,12 +29,9 @@ class Validator
     {
         foreach($users as $user){
             if($user->getEmail() === $email){
-                echo `O `.$email.` ja existe`;
                 return true;
-                
             }
         }
         return false;
     }
-
 }
