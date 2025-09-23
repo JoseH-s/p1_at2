@@ -9,7 +9,7 @@ class UserManager
 
     public function createUser(User $user): bool
     {
-        $emailValidate = Validator::validarEmail($user->getEmail());
+        $emailValidate = Validator::validateEmail($user->getEmail());
         if ($emailValidate !== true) {
             echo "E-mail inválido";
             return false;
@@ -62,5 +62,6 @@ class UserManager
         
     }
 }
+
 
 
